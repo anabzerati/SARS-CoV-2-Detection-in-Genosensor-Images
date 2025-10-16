@@ -49,18 +49,21 @@ def parse_report(path):
 
 
 # Read all report text files
-files = glob.glob("results/*_classification_report.txt")
+files = glob.glob("results/**/*_classification_report.txt", recursive=True)
 
 dfs = []
 for file in files:
     name = os.path.basename(file).replace("_classification_report.txt", "")
     
+    parts = name.split("_")
+    
     # handle different naming patterns for convnext models
     if name.startswith("convnext"):
-        model1, model2, dataaug, _ = name.split("_", 3)
-        model = model1 + model2
+        model = parts[0] + parts[1]
+        dataaug = parts[2]
     else:
-        model, dataaug, _ = name.split("_", 2)
+        model = parts[0]
+        dataaug = parts[1]
 
     print(model, dataaug)
     
