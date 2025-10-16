@@ -32,4 +32,4 @@ SARS-CoV-2-Detection-in-Genosensor-Images/
 ## Usage
 This repository does not include the original genosensor dataset since it is not public. 
 
-However, you can download the pre-trained .pt weights from [this Google Drive link](). This allows replicating the experiments exactly or adapting the models for related genosensor image classification tasks.
+However, you can download the pre-trained .pt weights from [this link](https://drive.google.com/drive/folders/17lUfFH-nZ14RtNyJpacnObFrVW3W_JSF?usp=sharing). This allows replicating the experiments exactly or adapting the models for related genosensor image classification tasks.
